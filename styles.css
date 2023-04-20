@@ -1,0 +1,379 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: yellow;
+}
+
+h1{
+    text-align: center;
+
+}
+
+h2{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    color: black;
+    text-decoration: underline;
+}
+
+
+/*-------PAGE 1--------*/
+
+
+.container{
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    margin-top: 30px;
+}
+
+
+.type1{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(25, 42, 197);
+    animation-name: box1;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    position: relative;
+    transform: skewX(-20deg);
+}
+
+@keyframes box1{
+    50%{transform: skewX(20deg);}
+    100%{transform: skewX(-20deg);}
+}
+
+
+.type2{
+    width: 100px;
+    height: 100px;
+    background-color: palevioletred;
+    animation-name: box2;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    position: relative;
+    transform: skewY(-20deg);
+    margin-top: 20px;
+}
+
+@keyframes box2{
+    50%{transform: skewY(20deg);}
+    100%{transform: skewY(-20deg);}
+}
+
+.type3{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(25, 42, 197);
+    animation-name: box3;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    position: relative;
+    margin-top: 20px;
+}
+
+@keyframes box3{
+    100%{transform: rotateZ(720deg);}
+}
+
+
+.type4a{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(7, 7, 73); 
+    animation-name: a1;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+    transform: scaleY(50px);
+    border: 1px solid rgb(7, 7, 73);
+    margin-top: 20px;
+}
+
+@keyframes a1 {
+  
+    0% {
+        transform: scaleY(0.5);
+    }
+    25% {
+        transform: scaleY(1);
+    }
+    75% {
+        transform: scaleY(0.5);
+    }
+    100% {
+        transform: scaleY(1);
+    }
+
+}
+
+.type4b{
+    width: 100px;
+    height: 100px;
+    background-color: brown; 
+    animation-name: a2;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+    transform: scaleX(50px);
+    border: 1px solid brown;
+    animation-direction: alternate;
+    margin-top: 20px;
+}
+
+@keyframes a2 {
+    0% {
+        transform: scaleX(0.5);
+    }
+    25% {
+        transform: scaleX(1);
+    }
+    75% {
+        transform: scaleX(0.5);
+    }
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+.type4c{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(21, 202, 21); 
+    animation-name: a3;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+    transform: rotate(0deg);
+    border: 1px solid  rgb(21, 202, 21);
+    margin-top: 20px;
+}
+
+@keyframes a3{
+    100%{
+        transform: rotate(-90deg);
+    }
+}
+
+.container1{
+    margin-left: 500px ;
+}
+
+
+.box{
+    width: 100px;
+    height: 100px;
+    background-color:greenyellow;
+    align-content: center;
+    margin: 20px;
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.div1{transition: width 2s}
+
+.div1:hover{width: 300px;}
+
+.div2{
+    transition: all 2s;
+}
+
+.div2:hover {
+    height: 300px;
+    width: 300px;
+}
+
+
+.div3{transition: all 2s;}
+.div3:hover {width: 300px; transition-timing-function: linear;}
+
+.div4{transition: all 2s;}
+.div4:hover {
+    width: 300px;
+    transition-timing-function: ease;
+}
+
+.div5{transition: all 2s;}
+.div5:hover {
+    width: 300px;
+    transition-timing-function: ease-in;
+}
+
+
+.div6{transition: all 2s;}
+.div6:hover {
+    width: 300px;
+    transition-timing-function: ease-in-out;
+}
+
+.div7{transition: all 2s;}
+.div7:hover {
+    width: 300px;
+    transition-timing-function: ease-out;
+}
+
+
+/*---------PAGE 3----------*/
+
+.background{
+
+    height: 100vh;
+    width: 100%;
+    background-image: url(./sky.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow-x: hidden;
+
+}
+
+.heading{
+    text-align: center;
+}
+span{
+    margin: 10px;
+}
+.one{
+    background-color: orange;
+}
+.two{
+    background-color: white;
+}
+.three{
+    background-color: green;
+}
+.road {
+    background-image: url(./road.jpg);
+    height: 200px;
+    width: 500%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-repeat: repeat-x;
+    position: absolute;
+    animation: road 5s linear infinite;
+    z-index: 1;
+}
+
+@keyframes road {
+    100% {
+        transform: translateX(-5000px);
+    }
+}
+
+.city {
+    background-image: url(./city.png);
+    background-repeat: repeat-x;
+    height: 200px;
+    width: 500%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    display: block;
+    z-index: 1;
+    bottom: 200px;
+    animation: buildings 20s linear infinite;
+}
+
+@keyframes buildings {
+    100% {
+        transform: translateX(-1300px);
+    }
+}
+
+.car {
+    width: 400px;
+    left: 50%;
+    bottom: 100px;
+    position: absolute;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.car img {
+    width: 100%;
+    animation: car 1s linear infinite;
+}
+
+@keyframes car {
+    100%{
+        transform: translateY(-1px);
+    }
+    50%{
+        transform: translateY(1px);
+    }
+    0%{
+        transform: translateY(-1px);
+    }
+}
+.wheels{
+    left: 50%;
+    bottom: 178px;
+    transform: translateX(-50%);
+    position: absolute;
+    z-index: 2;
+}
+
+.wheels img {
+    width: 72px;
+    height: 72px;
+    animation: wheels 1s linear infinite;
+}
+@keyframes wheels{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.wheel1 { 
+    left: -165px;
+    position: absolute;
+}
+
+.wheel2 {
+    left: 80px;
+    position: absolute;
+}
+.flag {
+    width: 400px;
+    left: 56%;
+    bottom: 205px;
+    position: absolute;
+    z-index: 2;
+}
+
+.flag img {
+    width: 20%;
+    animation: car 1s linear infinite;
+}
+
+.sun {
+    width: 400px;
+    left: 95%;
+    bottom: 500px;
+    position: absolute;
+
+}
+
+.sun img {
+    width: 20%;
+    animation: sun 25s infinite linear;
+}
+
+@keyframes sun {
+    100% {
+        transform: translateX(-300px);
+    }
+}
+
+
+
+
+
